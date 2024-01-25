@@ -14,4 +14,4 @@ A timer is started when entering the website and stored in the session storage. 
 
 ## Tech stack
 
-The website is built with React. The chatbots are implemented with the Gradio JS library. The website is deployed on Github Pages.
+The website is built with React and Next.js. The chatbots are implemented with the Gradio JS library. The website is deployed on Github Pages.
