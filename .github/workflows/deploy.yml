@@ -24,7 +24,7 @@ jobs:
         working-directory: ./uex-portfolio
 
       - name: Build my App
-        run: npm run build && npm run export && touch ./out/.nojekyll
+        run: npm run build && touch ./out/.nojekyll
         working-directory: ./uex-portfolio
 
       - name: Deploy 🚀
