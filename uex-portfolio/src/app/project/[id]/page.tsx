@@ -44,3 +44,11 @@ export default function Page({ params }: { params: { id: number } }) {
     </main>
   );
 }
+
+export async function generateStaticParams() {
+  const ids = [1, 2, 3, 4, 5, 6];
+
+  return ids.map((id) => ({
+    id: id.toString(),
+  }));
+}
