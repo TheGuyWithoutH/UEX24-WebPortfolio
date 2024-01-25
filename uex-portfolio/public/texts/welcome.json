@@ -1,0 +1,30 @@
+[
+  {
+    "type": "bot",
+    "message": "Hello you! I am JarvUEX, an AI conceived to guide you through this interactive experiment. Do not be afraid, I am not conscious (yet).",
+    "delay": 1000
+  },
+  {
+    "type": "bot",
+    "message": "In this website, you will delve into the synthesis of human creativity and artificial intelligence. However, it is imperative to navigate the nuanced terrain that lies at the intersection of innovation and caution.",
+    "delay": 3000
+  },
+  {
+    "type": "bot",
+    "message": "I am myself not to trust 😆. Understood?",
+    "options": [
+      {
+        "text": "Yes"
+      },
+      {
+        "text": "No"
+      }
+    ],
+    "delay": 500
+  },
+  {
+    "type": "bot",
+    "message": "Shall we ?",
+    "delay": 1000
+  }
+]
