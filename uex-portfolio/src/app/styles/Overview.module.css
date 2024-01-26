@@ -65,6 +65,7 @@
   flex-direction: column;
   height: 60vh;
   overflow-y: auto; /* Add scroll bar for long conversations */
+  overflow-x: hidden;
   scrollbar-color: rgba(255, 255, 255, 0.7) transparent; /* For Firefox */
 
   background: rgb(255, 255, 255);

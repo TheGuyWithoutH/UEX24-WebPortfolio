@@ -234,6 +234,7 @@
 .inputContainer {
   display: flex;
   margin-top: 15px; /* Push the input to the bottom */
+  width: 100%;
 }
 
 .textInput {

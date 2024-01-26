@@ -19,6 +19,7 @@ const ProjectCard = ({
   const router = useRouter();
   return (
     <div
+      key={index}
       className={styles.projectCard}
       onClick={() => router.push("/project/" + index)}
     >
