@@ -46,6 +46,10 @@ html {
   background-attachment: fixed;
 }
 
+p {
+  margin: 0;
+}
+
 /* Set transparent scrollbar styles for WebKit browsers */
 /* Note: Use "scrollbar-color" for Firefox (see below) */
 ::-webkit-scrollbar {
