@@ -21,11 +21,13 @@ export default function Page({ params }: { params: { id: number } }) {
   }));
 
   return (
-    <div className="w-full flex flex-col items-center mt-10 px-20 pb-20">
+    <div className={`w-full flex flex-col items-center mt-10 px-20 pb-20`}>
       <GoBackButton />
       <div className="w-full max-w-[1000px] flex flex-col items-start pl-20">
-        <h1 className={`text-8xl font-bold ${styles.txt}`}>{project.title}</h1>
-        <h2 className={`text-5xl font-extralight ${styles.txt} mt-5`}>
+        <h1 className={`text-8xl leading-normal  font-bold ${styles.txt}`}>
+          {project.title}
+        </h1>
+        <h2 className={`text-5xl font-extralight ${styles.txt}`}>
           {project.subTitle}
         </h2>
       </div>
@@ -53,7 +55,11 @@ export default function Page({ params }: { params: { id: number } }) {
       </div>
 
       <div className={styles.right}>
-        <ChatFeed messages={chatMessages} chatEnabled={true} />
+        <ChatFeed
+          messages={chatMessages}
+          chatEnabled={true}
+          scrollToEnd={false}
+        />
       </div>
     </div>
   );

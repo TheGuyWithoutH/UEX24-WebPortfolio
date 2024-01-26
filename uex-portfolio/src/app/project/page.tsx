@@ -18,10 +18,10 @@ export default function Page() {
     <div className="w-full flex flex-col items-center mt-10 px-20 pb-20">
       <GoBackButton />
       <div className="w-full max-w-[1000px] flex flex-col items-start pl-20">
-        <h1 className={`text-8xl font-bold ${styles.txt}`}>{title}</h1>
-        <h2 className={`text-5xl font-extralight ${styles.txt} mt-5`}>
-          {subtitle}
-        </h2>
+        <h1 className={`text-8xl leading-normal font-bold ${styles.txt}`}>
+          {title}
+        </h1>
+        <h2 className={`text-5xl font-extralight ${styles.txt}`}>{subtitle}</h2>
       </div>
 
       <div
@@ -47,7 +47,7 @@ export default function Page() {
       </div>
 
       <div className={styles.right}>
-        <ChatFeed messages={[]} chatEnabled={true} />
+        <ChatFeed messages={[]} chatEnabled={true} scrollToEnd={false} />
       </div>
     </div>
   );

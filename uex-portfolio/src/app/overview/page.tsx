@@ -15,7 +15,7 @@ export default function Page() {
   return (
     <div className={styles.page}>
       <GoBackButton />
-      <h1 className="text-8xl font-bold mt-10">Projects</h1>
+      <h1 className="text-8xl leading-normal z-2 font-bold mt-10">Projects</h1>
       <div className={styles.content}>
         <ProjectsSlider />
         <div className={styles.right}>

@@ -1,8 +1,21 @@
 {
   "title": "Decomposition",
   "subTitle": "The Green Keyboard",
-  "images": [],
+  "images": [
+    "https://cdn.discordapp.com/attachments/1159555429785936024/1159881377571930182/stef_a_journalist_1a129a49-1914-4c7b-804d-cb12c11e07e2.png?ex=65bd1035&is=65aa9b35&hm=78c142a7ef981c1719f14a2ba2220c4814e00f7695465bb0121b1842ae9c29a0&",
+    "https://media.discordapp.net/attachments/1159555429785936024/1159859623323521054/stef_a_laptop_made_from_recycled_CDs_89d72cb5-ecbc-4666-98c4-8d01e168a46d.png?ex=65bcfbf3&is=65aa86f3&hm=8377ed5597fdb68899c36fefcbe13c3796725b528c8659f51eea26ddfdcf5e4c&=&format=webp&quality=lossless&width=741&height=741",
+    "https://cdn.discordapp.com/attachments/1159555429785936024/1159885167104622652/stef_a_journalist_in_a_calm_environment_there_are_plants_and_a__1bb9878d-afcf-4961-8166-27a94d84b72a.png?ex=65bd13bd&is=65aa9ebd&hm=824ef90ae7082de0239c833ff7f1c2d13b8a6ae11ad9a8f16db5e37e7151d703&",
+    "https://cdn.discordapp.com/attachments/1076101981095067728/1200435275348856952/image.png?ex=65c62b78&is=65b3b678&hm=9d0c9ac80e6a2ad93610bfb28b0012e47d3098d8fe866dd4abdc890303e2fb4c&",
+    "https://cdn.discordapp.com/attachments/1159555429785936024/1159870112522829856/lerageux._a_journalist_typing_a449fa47-f36a-490b-b2b9-4d4a0ef771f3.png?ex=65bd05b8&is=65aa90b8&hm=72d6b6e827df8a69a942c030d65b3c0127f747e07779d3aa28a6110ffa1b45b4&",
+    "https://media.discordapp.net/attachments/1159555429785936024/1159855126140424282/stef_a_student_travelling_flyingcontrolling_a_drone_made_from_f_9aa7ac66-a430-4367-95dc-f4005fa3c606.png?ex=65bcf7c3&is=65aa82c3&hm=2249c9b3087b79243a08b61b896b5b270bf574a396d205f148a6a987f2f39704&=&format=webp&quality=lossless&width=741&height=741",
+    "https://media.discordapp.net/attachments/1159555429785936024/1159850795504783440/stef_a_lady_in_her_30s_waking_up_making_a_coffee_from_a_reassem_17406d7a-1d30-48e2-bdf3-40af44c799ec.png?ex=65bcf3ba&is=65aa7eba&hm=f1a4a3b405dca6bd5253f6c41052023bb80b82c9fad5b75f814450fe3eda2fe8&=&format=webp&quality=lossless&width=741&height=741"
+  ],
   "messages": [
+    {
+      "type": "bot",
+      "message": "Ask me anything about the project",
+      "delay": 0
+    },
     {
       "type": "instructions",
       "message": "You are JarvUEX, a chatbot assistant for a portfolio. Here is the descripion of a project of a portfolio: We create journalist-focused ergonomic keyboards from recycled wood, salvaging materials like old furniture, flooring, lumber. Customers can engage with us by contributing recyclable wood and reinforcing our sustainability commitment when they receive their customized keyboard. The central touchpoint is when customers receive their personalized ergonomic keyboard. We encourage them to bring additional recyclable wood materials, fostering sustainability. Our customized ergonomic keyboard offers journalists an eco-conscious, efficient typing experience with a unique texture for every keystroke, enhancing the typing experience and promoting sustainability. The store gathers reusable wood primarily from designated recycling points. Using laser cutting and sawing techniques, they craft keyboards to order. Customers have the option to supply their own wood or repurpose old objects. Precise measurements are taken to ensure a tailored fit to their hands. Additionally, customers can choose from a variety of keyboard sizes to suit their specific needs."

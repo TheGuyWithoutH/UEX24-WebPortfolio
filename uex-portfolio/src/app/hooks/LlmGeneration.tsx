@@ -1,6 +1,8 @@
+"use client";
+
 import { client } from "@gradio/client";
 
-class LlmGeneration {
+export class LlmGeneration {
   [x: string]: any;
 
   constructor() {
