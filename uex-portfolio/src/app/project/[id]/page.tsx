@@ -1,7 +1,7 @@
 // Default page Next.js
 
 import GoBackButton from "../../components/GoBackButton";
-import ChatFeed from "../../components/messages/ChatFeed";
+import ChatFeed, { Message } from "../../components/messages/ChatFeed";
 import styles from "../../styles/ProjectPage.module.css";
 import project1 from "../../texts/project1.json";
 import project2 from "../../texts/project2.json";
@@ -14,6 +14,12 @@ const projects = [project1, project2, project3, project4, project5, project6];
 
 export default function Page({ params }: { params: { id: number } }) {
   const project = projects[params.id];
+  const chatMessages: Message[] = project.messages.map((message) => ({
+    type: message.type as "bot" | "instructions" | "user",
+    message: message.message,
+    delay: 0,
+  }));
+
   return (
     <div className="w-full flex flex-col items-center mt-10 px-20 pb-20">
       <GoBackButton />
@@ -47,7 +53,7 @@ export default function Page({ params }: { params: { id: number } }) {
       </div>
 
       <div className={styles.right}>
-        <ChatFeed messages={project.messages} chatEnabled={true} />
+        <ChatFeed messages={chatMessages} chatEnabled={true} />
       </div>
     </div>
   );
