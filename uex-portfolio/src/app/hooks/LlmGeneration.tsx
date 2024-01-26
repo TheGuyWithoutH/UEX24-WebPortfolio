@@ -5,19 +5,25 @@ import { client } from "@gradio/client";
 export class LlmGeneration {
   [x: string]: any;
 
-  constructor() {
-    this.app = client("TheGuyWithoutH/Mistral-7b-chat", {});
+  constructor(loadedCallback: () => void) {
+    client(
+      "https://theguywithouth-mistral-7b-chat.hf.space/--replicas/1suiu/",
+      {}
+    ).then((app) => {
+      this.app = app;
+      console.log(app.config);
+      app.view_api().then((api) => {
+        console.log(api);
+      });
+      loadedCallback();
+    });
   }
 
-  async generateResponse(text: string) {
-    const response = await this.app.predict({
-      text: text,
-      temperature: 0.9,
-      max_new_tokens: 256,
-      topp_nucleus_sampling: 0.9,
-      repetition_penalty: 1.2,
-    });
-
-    return response;
+  generateResponse(text: string) {
+    if (!this.app) {
+      throw new Error("LLM not loaded");
+      return;
+    }
+    return this.app.predict("/chat", [text, null]);
   }
 }

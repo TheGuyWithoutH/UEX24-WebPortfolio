@@ -18,12 +18,13 @@ const useMessages = ({
   const [indexMessage, setIndexMessage] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isChatEnabled, setIsChatEnabled] = useState(isChatInteractive);
+  const [isLLMLoaded, setIsLLMLoaded] = useState(false);
   const [generator, setGenerator] = useState<LlmGeneration>(null);
   const bottomRef = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
 
   useEffect(() => {
-    setGenerator(new LlmGeneration());
+    setGenerator(new LlmGeneration(() => setIsLLMLoaded(true)));
   }, []);
 
   const resolveAction = (action: string[]) => {
@@ -56,12 +57,35 @@ const useMessages = ({
     switch (message.type) {
       case "instructions":
         setIsLoading(true);
-        generator.generateResponse(message.message).then((response) => {
-          setIsLoading(false);
-          setIsChatEnabled(
-            isChatInteractive && indexMessage === baseMessages.length - 1
-          );
-        });
+        if (isLLMLoaded) {
+          generator
+            .generateResponse(message.message)
+            .then((response) => {
+              console.log(response);
+              setIsLoading(false);
+              setIsChatEnabled(
+                isChatInteractive && indexMessage === baseMessages.length - 1
+              );
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        } else {
+          setTimeout(() => {
+            generator
+              .generateResponse(message.message)
+              .then((response) => {
+                console.log(response);
+                setIsLoading(false);
+                setIsChatEnabled(
+                  isChatInteractive && indexMessage === baseMessages.length - 1
+                );
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+          }, 2000);
+        }
         break;
       case "bot":
         setIsLoading(true);
@@ -105,17 +129,23 @@ const useMessages = ({
     event.currentTarget.reset();
 
     // generate a response
-    generator.generateResponse(message).then((response) => {
-      setChatMessages((prevMessages) => [
-        ...prevMessages,
-        {
-          type: "bot",
-          message: response.generated_text,
-          delay: 0,
-        },
-      ]);
-      setIsLoading(false);
-    });
+    generator
+      .generateResponse(message)
+      .then((response) => {
+        console.log(response);
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          {
+            type: "bot",
+            message: response.data[0].split("</s>")[0],
+            delay: 0,
+          },
+        ]);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     setIsLoading(true);
   }
 
