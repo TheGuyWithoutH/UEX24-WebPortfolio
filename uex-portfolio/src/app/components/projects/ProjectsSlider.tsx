@@ -1,6 +1,6 @@
 "use client";
 
-import { Ref, useEffect, useRef } from "react";
+import { LegacyRef, Ref, useEffect, useRef } from "react";
 import styles from "../../styles/Overview.module.css";
 import ProjectCard from "./ProjectCard";
 
@@ -44,11 +44,11 @@ const projects = [
 ];
 
 export function useHorizontalScroll() {
-  const elRef = useRef();
+  const elRef: LegacyRef<HTMLDivElement> = useRef();
   useEffect(() => {
     const el = elRef.current;
     if (el) {
-      const onWheel = (e) => {
+      const onWheel = (e: WheelEvent) => {
         if (e.deltaY == 0) return;
         e.preventDefault();
         el.scrollTo({
