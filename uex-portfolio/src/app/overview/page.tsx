@@ -1,13 +1,17 @@
 // Default page Next.js
-import Image from "next/image";
-import ProjectCard from "../components/projects/ProjectCard";
 import styles from "../styles/Overview.module.css";
-import ChatFeed from "../components/messages/ChatFeed";
+import ChatFeed, { Message } from "../components/messages/ChatFeed";
 import messages from "../texts/overview.json";
 import ProjectsSlider from "../components/projects/ProjectsSlider";
 import GoBackButton from "../components/GoBackButton";
 
 export default function Page() {
+  const overviewMessages: Message[] = messages.map((message) => ({
+    type: message.type as "bot" | "instructions" | "user",
+    message: message.message,
+    delay: message.delay || undefined,
+  }));
+
   return (
     <div className={styles.page}>
       <GoBackButton />
@@ -15,7 +19,7 @@ export default function Page() {
       <div className={styles.content}>
         <ProjectsSlider />
         <div className={styles.right}>
-          <ChatFeed messages={messages} chatEnabled={true} />
+          <ChatFeed messages={overviewMessages} chatEnabled={true} />
         </div>
       </div>
     </div>

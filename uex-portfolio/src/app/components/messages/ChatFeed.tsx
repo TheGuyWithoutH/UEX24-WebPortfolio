@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import SendButton from "./SendButton";
 import styles from "../../styles/Home.module.css";
 
-type Message = {
+export type Message = {
   type: "bot" | "instructions" | "user";
   message: string;
   delay: number;
