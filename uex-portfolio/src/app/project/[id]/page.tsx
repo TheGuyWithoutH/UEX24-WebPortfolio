@@ -1,7 +1,5 @@
 // Default page Next.js
 
-"use client";
-
 import GoBackButton from "../../components/GoBackButton";
 import ChatFeed from "../../components/messages/ChatFeed";
 import styles from "../../styles/ProjectPage.module.css";
