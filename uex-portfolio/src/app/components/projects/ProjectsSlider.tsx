@@ -62,14 +62,14 @@ export function useHorizontalScroll() {
   return elRef;
 }
 
-export default () => {
+export default function ProjectSlider() {
   const scrollRef = useHorizontalScroll();
 
   return (
     <div className={styles.slider} ref={scrollRef}>
       {projects.map((project, index) => (
-        <ProjectCard index={index} {...project} />
+        <ProjectCard key={index} index={index} {...project} />
       ))}
     </div>
   );
-};
+}
