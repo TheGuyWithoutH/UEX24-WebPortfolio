@@ -6,6 +6,7 @@ const { webpack } = require("next/dist/compiled/webpack/webpack");
 const nextConfig = {
   output: "export",
   basePath: "/UEX24-WebPortfolio",
+  assetPrefix: "./",
   images: {
     loader: "akamai",
     path: "",
