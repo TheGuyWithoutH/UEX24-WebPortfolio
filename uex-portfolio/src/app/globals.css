@@ -40,6 +40,10 @@ html {
   scrollbar-color: rgba(255, 255, 255, 0.7) transparent; /* For Firefox */
   background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
     url("/UEX24-WebPortfolio/images/galaxy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Set transparent scrollbar styles for WebKit browsers */
