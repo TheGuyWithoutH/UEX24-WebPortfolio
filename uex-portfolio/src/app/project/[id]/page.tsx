@@ -52,3 +52,5 @@ export async function generateStaticParams() {
     id: id.toString(),
   }));
 }
+
+export const dynamicParams = true;

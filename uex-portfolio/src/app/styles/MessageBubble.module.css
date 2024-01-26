@@ -40,7 +40,7 @@
   border-width: 8px 0 8px 12px;
   border-color: transparent transparent transparent #43abe2;
   right: -12px;
-  top: 50%;
+  top: 20px;
   transform: translateY(-50%);
 }
 
@@ -48,7 +48,7 @@
   border-width: 8px 12px 8px 0;
   border-color: transparent #e0e0e0 transparent transparent;
   left: -12px;
-  top: 50%;
+  top: 20px;
   transform: translateY(-50%);
 }
 

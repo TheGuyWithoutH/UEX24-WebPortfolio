@@ -14,10 +14,12 @@
     "message": "I am myself not to trust 😆. Understood?",
     "options": [
       {
-        "text": "Yes"
+        "text": "Yes",
+        "action": ["send", "Yes"]
       },
       {
-        "text": "No"
+        "text": "No",
+        "action": ["send", "No"]
       }
     ],
     "delay": 500
@@ -25,6 +27,12 @@
   {
     "type": "bot",
     "message": "Shall we ?",
+    "options": [
+      {
+        "text": "Go to the portfolio",
+        "action": ["navigate", "/overview"]
+      }
+    ],
     "delay": 1000
   }
 ]
