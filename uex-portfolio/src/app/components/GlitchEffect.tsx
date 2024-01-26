@@ -37,7 +37,7 @@ export default function GlitchEffect() {
   useEffect(() => {
     setTimeout(() => {
       router.replace("/end");
-    }, 2 ** 18 + 30000);
+    }, 2 ** 18);
   }, []);
 
   return <></>;

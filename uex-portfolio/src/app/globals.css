@@ -38,6 +38,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-color: rgba(255, 255, 255, 0.7) transparent; /* For Firefox */
   background-color: black;
+  height: fit-content;
 }
 
 /* Set transparent scrollbar styles for WebKit browsers */
