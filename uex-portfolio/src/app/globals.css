@@ -72,13 +72,13 @@ html {
     transform: translate(0px, 0px) skew(5deg);
   }
 }
-div:before,
-div:after {
+.glitch-effect:before,
+.glitch-effect:after {
   content: attr(title);
   position: absolute;
   left: 0;
 }
-div:before {
+.glitch-effect:before {
   animation: glitchtop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
@@ -95,7 +95,7 @@ div:before {
     transform: translate(13px, -1px) skew(-13deg);
   }
 }
-div:after {
+.glitch-effect:after {
   animation: glitchbottom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
