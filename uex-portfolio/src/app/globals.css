@@ -26,6 +26,7 @@ body {
   background-attachment: fixed;
   scrollbar-color: transparent transparent; /* thumb and track color */
   scrollbar-width: thin; /* for Firefox */
+  height: 100%;
 }
 
 @layer utilities {
@@ -38,7 +39,6 @@ html {
   scroll-behavior: smooth;
   scrollbar-color: rgba(255, 255, 255, 0.7) transparent; /* For Firefox */
   background-color: black;
-  height: fit-content;
 }
 
 /* Set transparent scrollbar styles for WebKit browsers */
@@ -77,6 +77,7 @@ html {
   content: attr(title);
   position: absolute;
   left: 0;
+  pointer-events: none;
 }
 .glitch-effect:before {
   animation: glitchtop 1s linear infinite;
@@ -98,6 +99,7 @@ html {
 .glitch-effect:after {
   animation: glitchbottom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  pointer-events: none;
 }
 @keyframes glitchbottom {
   2%,
