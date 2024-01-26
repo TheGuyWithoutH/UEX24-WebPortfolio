@@ -20,7 +20,7 @@ export default function Page({ params }: { params: { id: number } }) {
       <div className="w-full max-w-[1000px] flex flex-col items-start pl-20">
         <h1 className={`text-8xl font-bold ${styles.txt}`}>{project.title}</h1>
         <h2 className={`text-5xl font-extralight ${styles.txt} mt-5`}>
-          {project.subtitle}
+          {project.subTitle}
         </h2>
       </div>
 

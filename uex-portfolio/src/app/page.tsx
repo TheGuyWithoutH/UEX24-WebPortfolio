@@ -1,9 +1,19 @@
 import styles from "./styles/Home.module.css";
-import ChatFeed from "./components/messages/ChatFeed";
+import ChatFeed, { Message } from "./components/messages/ChatFeed";
 import SendButton from "./components/messages/SendButton";
 import messages from "./texts/welcome.json";
 
 export default function Home() {
+  const chatMessages: Message[] = messages.map((message) => ({
+    type: message.type as "bot" | "instructions" | "user",
+    message: message.message,
+    delay: message.delay || undefined,
+    options: message.options?.map((option) => ({
+      text: option.text,
+      action: option.action,
+    })),
+  }));
+
   return (
     <div className={`${styles.container}`}>
       {/* Starry background */}
@@ -26,7 +36,7 @@ export default function Home() {
           <h2 className="text-4xl font-light">Ugo Balducci</h2>
         </div>
         <div className={styles.right}>
-          <ChatFeed messages={messages} chatEnabled={false} />
+          <ChatFeed messages={chatMessages} chatEnabled={false} />
         </div>
       </div>
     </div>
