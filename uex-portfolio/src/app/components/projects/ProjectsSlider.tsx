@@ -46,9 +46,9 @@ const projects = [
 export function useHorizontalScroll() {
   const elRef = useRef();
   useEffect(() => {
-    const el: Ref<HTMLDivElement> = elRef.current;
+    const el = elRef.current;
     if (el) {
-      const onWheel = (e: WheelEvent) => {
+      const onWheel = (e) => {
         if (e.deltaY == 0) return;
         e.preventDefault();
         el.scrollTo({
