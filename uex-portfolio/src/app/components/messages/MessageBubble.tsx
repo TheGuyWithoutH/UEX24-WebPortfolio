@@ -1,6 +1,7 @@
 // components/MessageBubble.js
 
 import React from "react";
+import Image from "next/image";
 import styles from "../../styles/MessageBubble.module.css";
 
 const MessageBubble = ({
@@ -23,7 +24,7 @@ const MessageBubble = ({
         sender === "receiver" ? styles.receiver : styles.sender
       }`}
     >
-      <img
+      <Image
         src={profilePicture}
         alt="Profile"
         className={styles.profilePicture}

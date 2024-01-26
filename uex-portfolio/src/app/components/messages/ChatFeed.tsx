@@ -79,13 +79,12 @@ const ChatFeed = ({
       {chatMessages.map((message, index) => {
         if (message.options) {
           return (
-            <React.Fragment>
+            <React.Fragment key={index}>
               <MessageBubble
-                key={index}
                 sender={message.type === "bot" ? "receiver" : "sender"}
                 message={message.message}
               />
-              <div className="flex flex-row space-x-2 mb-10" key={index + 1000}>
+              <div className="flex flex-row space-x-2 mb-10">
                 {message.options.map((option, index) => (
                   <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"

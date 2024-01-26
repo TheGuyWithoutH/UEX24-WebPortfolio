@@ -29,6 +29,7 @@ export default function Page() {
       >
         {images.map((image, index) => (
           <div
+            key={index}
             className={`row-span-1 rounded-xl overflow-hidden hover:scale-105 transition-all  ${
               index === 4 ? "col-span-2" : ""
             } ${index === 0 ? "col-span-2 row-span-2" : ""} ${
